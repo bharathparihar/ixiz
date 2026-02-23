@@ -14,21 +14,27 @@ return new class extends Migration
     {
         Setting::create([
             'key' => 'phonepe_merchant_id',
+            'value' => ''
         ]);
         Setting::create([
             'key' => 'phonepe_merchant_user_id',
+            'value' => ''
         ]);
         Setting::create([
             'key' => 'phonepe_env',
+            'value' => ''
         ]);
         Setting::create([
             'key' => 'phonepe_salt_key',
+            'value' => ''
         ]);
         Setting::create([
             'key' => 'phonepe_salt_index',
+            'value' => ''
         ]);
         Setting::create([
             'key' => 'phonepe_merchant_transaction_id',
+            'value' => ''
         ]);
     }
 };

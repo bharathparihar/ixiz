@@ -14,9 +14,11 @@ return new class extends Migration
     {
         Setting::create([
             'key' => 'paystack_key',
+            'value' => '',
         ]);
         Setting::create([
             'key' => 'paystack_secret',
+            'value' => '',
         ]);
     }
 };
