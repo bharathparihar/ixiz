@@ -44,4 +44,4 @@ services:
           name: vcardpro-db
           property: password
       - key: APP_KEY
-        generateValue: true
+        value: "base64:/VR7itPRMggN281EBagG3/F3YV+RaTb8u973wcwHc/U="
