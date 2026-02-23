@@ -19,8 +19,11 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Change document root to public
-RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+# Change document root to public and silent ServerName warning
+RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf \
+    && echo "ServerName localhost" >> /etc/apache2/apache2.conf \
+    && bash -c 'echo -e "<Directory /var/www/html/public>\n    AllowOverride All\n    Require all granted\n</Directory>" > /etc/apache2/conf-available/vcard.conf' \
+    && a2enconf vcard
 
 # Modify Apache to listen on $PORT instead of default 80
 RUN sed -i 's/Listen 80/Listen ${PORT}/g' /etc/apache2/ports.conf
