@@ -9,7 +9,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $setting = \App\Models\Setting::whereKey('affiliation_amount')->first();
+        $setting = \App\Models\Setting::where('key', 'affiliation_amount')->first();
         if ($setting) {
             return;
         }
