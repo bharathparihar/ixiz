@@ -3,7 +3,7 @@
     {{ getAppName() }}
 @endsection
 @section('content')
-    <section class="hero-section" id="frontHomeTab" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+    <!-- <section class="hero-section" id="frontHomeTab" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
         <div class="container"> @include('flash::message') </div>
         <div class="bg-img"></div>
         <div class="container">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- end hero section -->
 
     <!-- start features section -->

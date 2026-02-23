@@ -26,6 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call(DefaultLanguageSettingsSeeder::class);
         $this->call(DefaultUserLanguageSettingsSeeder::class);
         $this->call(TermsConditionsSeeder::class);
+        $this->call(RefundCancellationSeeder::class);
+        $this->call(ImprintSeeder::class);
         $this->call(WhatsAppStoreTemplatesSeeder::class);
         $this->call(BlockEmailDomainsSettingSeeder::class);
         $this->call(ShowReferralCodeSettingSeeder::class);
