@@ -1242,7 +1242,7 @@ if (!function_exists('getSuperAdminSettingValue')) {
             if (empty($settings)) {
                 $settings = Setting::all()->keyBy('key');
             }
-            return $settings[$key]->value;
+            return isset($settings[$key]) ? $settings[$key]->value : '';
         } catch (\Exception $e) {
         }
     }
