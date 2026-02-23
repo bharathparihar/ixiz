@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $setting = Setting::whereKey('affiliation_amount_type')->first();
+        $setting = Setting::where('key', 'affiliation_amount_type')->first();
         if ($setting) {
             return;
         }

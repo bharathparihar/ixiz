@@ -10,7 +10,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $setting = Setting::whereKey('register_enable')->first();
+        $setting = Setting::where('key', 'register_enable')->first();
         if ($setting) {
             return;
         }

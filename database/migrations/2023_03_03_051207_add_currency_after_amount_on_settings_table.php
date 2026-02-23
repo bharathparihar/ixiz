@@ -10,7 +10,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $setting = Setting::whereKey('currency_after_amount')->first();
+        $setting = Setting::where('key', 'currency_after_amount')->first();
         if ($setting) {
             return;
         }

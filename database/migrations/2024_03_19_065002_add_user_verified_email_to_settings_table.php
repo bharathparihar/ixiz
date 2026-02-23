@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $setting = Setting::whereKey('user_verified_email')->first();
+        $setting = Setting::where('key', 'user_verified_email')->first();
         if ($setting) {
             return;
         }

@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('settings', function (Blueprint $table) {
-            $setting = Setting::whereKey('recaptcha_version')->first();
+            $setting = Setting::where('key', 'recaptcha_version')->first();
             if ($setting) {
                 return;
             }
