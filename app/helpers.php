@@ -146,9 +146,12 @@ if (!function_exists('getLogoUrl')) {
             $settings = Setting::all()->keyBy('key');
         }
 
-        $appLogo = $settings['app_logo'];
+        if (isset($settings['app_logo'])) {
+            $appLogo = $settings['app_logo'];
+            return $appLogo->logo_url;
+        }
 
-        return $appLogo->logo_url;
+        return asset('assets/img/infyom-logo.png'); // Fallback logo
     }
 }
 
@@ -183,9 +186,12 @@ if (!function_exists('getFaviconUrl')) {
             $settings = Setting::all()->keyBy('key');
         }
 
-        $favicon = $settings['favicon'];
+        if (isset($settings['favicon'])) {
+            $favicon = $settings['favicon'];
+            return $favicon->favicon_url;
+        }
 
-        return $favicon->favicon_url;
+        return asset('favicon.ico'); // Fallback favicon
     }
 }
 
