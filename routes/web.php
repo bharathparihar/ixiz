@@ -122,7 +122,8 @@ Route::middleware(['freshInstall'])->group(function () {
     });
 
     Route::get('/', function () {
-        return (!Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
+        // return (!Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
+        return redirect(route('login'));
     })->middleware('checkCustomDomain');
 
     //social logins

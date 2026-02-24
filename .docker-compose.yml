@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vcards-app
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    environment:
+      APP_NAME: "VCard App"
+      APP_ENV: local
+      APP_KEY: base64:YOUR_GENERATED_KEY_HERE
+      APP_DEBUG: true
+      APP_URL: http://localhost:8000
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor

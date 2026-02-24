@@ -30,7 +30,7 @@
         <div class="vcard-one__banner w-100 position-relative">
             <img src="{{asset('assets/img/vcard1/vcard-one-bg.png')}}" class="img-fluid" alt="background image" loading="lazy"/>
 
-            <div class="d-flex justify-content-end position-absolute top-0 end-0 me-3">
+            <!-- <div class="d-flex justify-content-end position-absolute top-0 end-0 me-3">
                 <div class="language pt-4 me-2">
                     <ul class="text-decoration-none">
                         <li class="dropdown1 dropdown lang-list">
@@ -65,7 +65,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
         {{--profile--}}
         <div class="vcard-one__profile position-relative">
@@ -563,7 +563,7 @@
             <br>
             <div class="m-2 ">
                 <iframe width="100%" height="300px"
-                        src='https://maps.google.de/maps?q=White+House,+TN,+USA/&output=embed' frameborder="0"
+                        src='https://maps.google.com/maps?q={{$vcard->location_url ?? "White House, TN, USA"}}&output=embed' frameborder="0"
                         scrolling="no" marginheight="0" marginwidth="0" style="border-radius: 10px;"></iframe>
             </div>
         </div>

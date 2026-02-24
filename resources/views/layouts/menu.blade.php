@@ -30,13 +30,13 @@
             <span class="aside-menu-title">{{ __('messages.vcards') }}</span>
         </a>
     </li>
-    <li class="nav-item {{ Request::is('sadmin/whatsapp-store*') ? 'active' : '' }}">
+    <!-- <li class="nav-item {{ Request::is('sadmin/whatsapp-store*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page" href="{{ route('sadmin.whatsapp-stores.index') }}">
             <span class="aside-menu-icon"><i class="fab fa-whatsapp"></i></span>
             {{-- <span class="aside-menu-icon"><i class="fab fa-whatsapp icon-color-gray"></i></span> --}}
             <span class="aside-menu-title">{{ __('messages.whatsapp_stores.whatsapp_stores') }}</span>
         </a>
-    </li>
+    </li> -->
 
     <!-- <li class="nav-item {{ Request::is('sadmin/add-on*') ? 'active' : '' }}">
         <a class="nav-link  d-flex align-items-center py-3 gap-3" href="{{ route('addon.index') }}">
@@ -238,7 +238,7 @@
         </a>
     </li>
 
-    @if (getPlanFeature(getCurrentSubscription()->plan)['whatsapp_store'])
+   <!--  @if (getPlanFeature(getCurrentSubscription()->plan)['whatsapp_store'])
         <li class="vcard-option nav-item {{ Request::is('admin/whatsapp-store*') ? 'active' : '' }}">
             <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page"
                 href="{{ route('whatsapp.stores') }}">
@@ -271,7 +271,7 @@
                 <span class="aside-menu-title">{{ __('messages.whatsapp_product_order') }}</span>
             </a>
         </li>
-    @endif
+    @endif -->
 
     <li class="nav-item {{ Request::is('admin/inquiries*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page" href="{{ route('inquiries.index') }}">
@@ -289,14 +289,14 @@
         </a>
     </li>
 
-    <li class="nav-item {{ Request::is('admin/product-orders*') ? 'active' : '' }}">
+    <!-- <li class="nav-item {{ Request::is('admin/product-orders*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page"
             href="{{ route('product-orders.index') }}">
             <span class="aside-menu-icon"><i class="fas fa-money-bills icon-color-bs-darkyellow"></i></span>
             {{-- <span class="aside-menu-icon"><i class="fas fa-money-bills icon-color-gray"></i></span> --}}
             <span class="aside-menu-title">{{ __('messages.product_orders') }}</span>
         </a>
-    </li>
+    </li> -->
 
     <li
         class="nav-item {{ Request::is('admin/virtual-backgrounds*') || Request::is('admin/custom-virtual-backgrounds*') ? 'active' : '' }}">
@@ -308,7 +308,7 @@
         </a>
     </li>
 
-    @if (checkFeature('affiliation'))
+    <!-- @if (checkFeature('affiliation'))
         <li class="nav-item {{ Request::is('admin/affiliations*') ? 'active' : '' }}">
             <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page"
                 href="{{ route('user.affiliation.index') }}">
@@ -326,7 +326,7 @@
                 <span class="aside-menu-title">{{ __('messages.nfc.my_nfc_cards') }}</span>
             </a>
         </li>
-    @endif
+    @endif -->
     <li class="nav-item {{ Request::is('admin/storage*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-3 gap-3" aria-current="page" href="{{ route('user.storage') }}">
             <span class="aside-menu-icon"> <i class="fa-solid fa-memory icon-color-bs-red"></i></span>

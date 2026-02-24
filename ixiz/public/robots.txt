@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /404
-Sitemap: {your-app-url}/sitemap/sitemap-index.xml
-Host: {your-app-url}

@@ -3,9 +3,10 @@
     {{ __('messages.common.login') }}
 @endsection
 @section('content')
-    <div class="login-section bg-white overflow-hidden position-relative min-vh-100"
-         style="background-image: url('{{ asset($registerImage) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="login-section bg-white overflow-hidden position-relative min-vh-100"  >
 
+         <!-- style="background-image: url('{{ asset($registerImage) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;" -->
+       
         <div class="d-flex align-items-center justify-content-center min-vh-100 p-3 p-md-4" @if(getLanguageByKey(checkFrontLanguageSession()) == 'Arabic' || getLanguageByKey(checkFrontLanguageSession()) == 'Persian') dir="rtl" @endif style="position: relative;">
             <div class="container-fluid">
                 <div class="row justify-content-center">

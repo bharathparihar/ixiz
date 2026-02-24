@@ -1,5 +1,5 @@
 <!-- Newsletter Section -->
-<section class="py-20 bg-blue-600" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+<!-- <section class="py-20 bg-blue-600" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-4">{{ __('messages.Subscribe_Our_Newsletter') }}</h2>
         <p class="text-xl text-blue-100 mb-8">{{ __('messages.Receive_latest_news_update_and_many_other_things_every_week') }}</p>
@@ -17,10 +17,10 @@
 
         <p class="text-sm text-blue-100 opacity-80 mt-4">{{ __('messages.theme3.we_respect_privacy') }}</p>
     </div>
-</section>
+</section> -->
 
 <!-- Footer -->
-<footer class="bg-gray-900 text-white py-8" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+<!-- <footer class="bg-gray-900 text-white py-8" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center mb-6">
             <div class="flex items-center mb-6 md:mb-0">
@@ -118,7 +118,7 @@
     </div>
 </div>
     </div>
-</footer>
+</footer> -->
 
 <!-- Support Banner -->
 @if (isset($setting['banner_enable']) && $setting['banner_enable'] == 1)

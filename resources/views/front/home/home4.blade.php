@@ -88,7 +88,7 @@
                         </div>
 
                         <!-- Trust Indicators -->
-                        <div class="flex items-center @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') space-x-reverse space-x-6 @else space-x-6 @endif text-sm text-gray-500">
+                        <!-- <div class="flex items-center @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') space-x-reverse space-x-6 @else space-x-6 @endif text-sm text-gray-500">
                             <div class="flex items-center">
                                 <div class="flex @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') space-x-reverse -space-x-2 ml-3 @else -space-x-2 mr-3 @endif">
                                     @foreach ($latestUsers as $user)
@@ -105,14 +105,14 @@
                                 </div>
                                 <span><span class="font-semibold">{{ $totalUser }}+</span> {{ __('messages.theme3.proffessionals_have_joined') }}</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Right side: Digital Card Slider -->
-                    <div class="flex justify-center lg:justify-end">
+                    <!-- <div class="flex justify-center lg:justify-end">
                         <div class="floating relative">
                             <img src="{{ isset($setting['home_page_banner']) ? $setting['home_page_banner'] : asset('aassets/img/new_home_page/hero-illustration.png') }}" alt="Digital vCard Illustration" class="w-full max-w-lg">
-                            <!-- Floating elements around the main illustration -->
+                            // Floating elements around the main illustration
                             <div class="absolute top-10 -left-6 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center animate-pulse">
                                 <i data-feather="users" class="w-8 h-8 text-blue-600"></i>
                             </div>
@@ -123,14 +123,14 @@
                                 <i data-feather="check" class="w-6 h-6 text-green-600"></i>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
 
         <!-- vCard Theme Slider Section -->
-        <section id="themes" class="py-20 bg-gray-50">
+        <!-- <section id="themes" class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">{{ __('messages.vcards_templates') }}</h2>
@@ -282,7 +282,7 @@
                         </button>
                     </div>
 
-                    <!-- Dot Indicators -->
+                   // Dot Indicators
                     <div class="flex justify-center mt-6 sm:mt-8 space-x-2">
                         <template x-for="(theme, index) in themes" :key="index">
                             <button @click="currentSlide = index"
@@ -291,7 +291,7 @@
                         </template>
                     </div>
 
-                    <!-- View All Button -->
+                  //  View All Button
                     <div class="text-center mt-6 sm:mt-8">
                         <a href="{{ route('vcard-templates') }}"
                            class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl" style="padding-top: 0.75rem;padding-bottom: 0.75rem;">
@@ -300,10 +300,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Features Section -->
-        <section id="features" class="py-20 bg-white" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+        <!-- <section id="features" class="py-20 bg-white" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">{{ __('messages.theme3.service_we_offer') }}</h2>
@@ -367,11 +367,11 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- Testimonials Section -->
-        @if(!$testimonials->isEmpty())
+        <!-- @if(!$testimonials->isEmpty())
         <section class="py-20 bg-gray-50" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
@@ -430,10 +430,10 @@
                     @resize.window.debounce.100ms="updateScreenSize()"
                     class="relative">
 
-                    <!-- Mobile View (1 card) -->
+                  //  Mobile View (1 card)
                     <div class="block md:hidden">
                         <div class="relative">
-                            <!-- Testimonial Card -->
+                          //  Testimonial Card
                             <div class="w-full flex justify-center">
                                 <template x-for="testimonial in getVisibleTestimonials()" :key="testimonial.id + '_mobile_' + currentSlide + '_' + screenSize">
                                     <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow card-hover max-w-sm w-full mx-4">
@@ -456,7 +456,7 @@
                                 </template>
                             </div>
 
-                            <!-- Bottom Center Navigation -->
+                          //  Bottom Center Navigation
                             <div class="flex justify-center items-center mt-6 space-x-8">
                                 <button @click="prevSlide()"
                                         class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-110 {{ checkFrontLanguageSession() == 'ar' ? 'rotate-180' : '' }}">
@@ -475,7 +475,7 @@
                         </div>
                     </div>
 
-                    <!-- Tablet View (2 cards) -->
+                   // Tablet View (2 cards)
                     <div class="hidden md:block lg:hidden">
                         <div class="flex items-center justify-center relative">
                             <button @click="prevSlide()"
@@ -516,7 +516,7 @@
                         </div>
                     </div>
 
-                    <!-- Desktop View (3 cards) -->
+                    // Desktop View (3 cards)
                     <div class="hidden lg:block">
                         <div class="flex items-center justify-center relative">
                             <button @click="prevSlide()"
@@ -558,17 +558,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         @endif
 
         <!-- Pricing Plans -->
-        <section id="pricing" class="py-20 bg-white" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+        <!-- <section id="pricing" class="py-20 bg-white" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">{{ __('messages.theme3.choose_your_plan') }}</h2>
                     <p class="text-xl text-gray-600 mb-8">{{ __('messages.theme3.select_the_plan_that_fits_your_needs') }}</p>
 
-                    <!-- Month/Year/Unlimited Toggle -->
+                  //  Month/Year/Unlimited Toggle
                     <div class="flex justify-center mb-8">
                         <div class="bg-gray-100 rounded-lg p-1 shadow-md inline-flex">
                             <button id="monthlyBtn" onclick="togglePricing('monthly')"
@@ -630,12 +630,12 @@
                     $unlimitedPlans = arrangeWithPopularInMiddle($unlimitedPlansRaw);
                     @endphp
 
-                    <!-- Monthly Plans -->
+                   // Monthly Plans
                     <div id="monthly-plans" class="grid lg:grid-cols-3 gap-8">
                         @foreach($monthlyPlans as $index => $plan)
                             <div class="bg-white rounded-2xl border-2 {{ $index == 1 ? 'border-blue-600 shadow-xl relative transform scale-105' : 'border-gray-200 hover:border-gray-300 transition-colors shadow-lg hover:shadow-xl' }} relative">
 
-                                <!-- Most Popular Badge for middle plan -->
+                               // Most Popular Badge for middle plan
                                 @if($index == 1)
                                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
@@ -663,7 +663,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Custom vCard Selection -->
+                                 //   Custom vCard Selection
                                     @if($plan->custom_select == 1 && $plan->planCustomFields->isNotEmpty())
                                         <div class="mb-6">
                                             <select id="vcardNumber-{{ $plan->id }}" class="w-full p-3 border border-gray-300 rounded-lg customSelect" data-plan-id="{{ $plan->id }}" data-type="monthly">
@@ -679,7 +679,7 @@
                                         </div>
                                     @endif
 
-                                    <!-- Plan Features -->
+                                 //   Plan Features
                                     <ul class="space-y-4 mb-8">
                                         <li class="flex items-center">
                                             <i data-feather="check" class="w-5 h-5 text-green-500 mr-3"></i>
@@ -711,7 +711,7 @@
                                         @endforeach
                                     </ul>
 
-                                    <!-- Expandable Features -->
+                                  //  Expandable Features
                                     @if(collect($features)->count() > $skipCount)
                                         <div x-show="expandedPlan === '{{ $plan->id }}'" x-transition class="mb-6">
                                             <div class="border-t pt-4">
@@ -734,7 +734,7 @@
                                         </button>
                                     @endif
 
-                                    <!-- CTA Button -->
+                                 //   CTA Button
                                     <div class="text-center">
                                         @if($index == 0)
                                             <a href="{{ route('register') }}" class="block w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
@@ -759,7 +759,7 @@
                         @endforeach
                     </div>
 
-                    <!-- Yearly Plans -->
+                   // Yearly Plans
                     <div id="yearly-plans" class="grid lg:grid-cols-3 gap-8" style="display: none;">
                         @foreach($yearlyPlans as $index => $plan)
                             <div class="bg-white rounded-2xl border-2 {{ $index == 1 ? 'border-blue-600 shadow-xl relative transform scale-105' : 'border-gray-200 hover:border-gray-300 transition-colors shadow-lg hover:shadow-xl' }} relative">
@@ -791,7 +791,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Custom vCard Selection -->
+                                  //  Custom vCard Selection
                                     @if($plan->custom_select == 1 && $plan->planCustomFields->isNotEmpty())
                                         <div class="mb-6">
                                             <select id="vcardNumber-{{ $plan->id }}" class="w-full p-3 border border-gray-300 rounded-lg customSelect" data-plan-id="{{ $plan->id }}" data-type="yearly">
@@ -807,7 +807,7 @@
                                         </div>
                                     @endif
 
-                                    <!-- Plan Features -->
+                                   // Plan Features
                                     <ul class="space-y-4 mb-8">
                                         <li class="flex items-center">
                                             <i data-feather="check" class="w-5 h-5 text-green-500 mr-3"></i>
@@ -839,7 +839,7 @@
                                         @endforeach
                                     </ul>
 
-                                    <!-- Expandable Features -->
+                                  //  Expandable Features
                                     @if(collect($features)->count() > $skipCount)
                                         <div x-show="expandedPlan === '{{ $plan->id }}'" x-transition class="mb-6">
                                             <div class="border-t pt-4">
@@ -862,7 +862,7 @@
                                         </button>
                                     @endif
 
-                                    <!-- CTA Button -->
+                                  //  CTA Button
                                     <div class="text-center">
                                         @if($index == 0)
                                             <a href="{{ route('register') }}" class="block w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
@@ -887,7 +887,7 @@
                         @endforeach
                     </div>
 
-                    <!-- Unlimited Plans -->
+                   // Unlimited Plans
                     <div id="unlimited-plans" class="grid lg:grid-cols-3 gap-8" style="display: none;">
                         @foreach($unlimitedPlans as $index => $plan)
                             <div class="bg-white rounded-2xl border-2 {{ $index == 1 ? 'border-blue-600 shadow-xl relative transform scale-105' : 'border-gray-200 hover:border-gray-300 transition-colors shadow-lg hover:shadow-xl' }} relative">
@@ -917,7 +917,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Custom vCard Selection -->
+                                 //   Custom vCard Selection
                                     @if($plan->custom_select == 1 && $plan->planCustomFields->isNotEmpty())
                                         <div class="mb-6">
                                             <select id="vcardNumber-{{ $plan->id }}" class="w-full p-3 border border-gray-300 rounded-lg customSelect" data-plan-id="{{ $plan->id }}" data-type="unlimited">
@@ -933,7 +933,7 @@
                                         </div>
                                     @endif
 
-                                    <!-- Plan Features -->
+                                    // Plan Features
                                     <ul class="space-y-4 mb-8">
                                         <li class="flex items-center">
                                             <i data-feather="check" class="w-5 h-5 text-green-500 mr-3"></i>
@@ -965,7 +965,7 @@
                                         @endforeach
                                     </ul>
 
-                                    <!-- Expandable Features -->
+                                   // Expandable Features
                                     @if(collect($features)->count() > $skipCount)
                                         <div x-show="expandedPlan === '{{ $plan->id }}'" x-transition class="mb-6">
                                             <div class="border-t pt-4">
@@ -988,7 +988,7 @@
                                         </button>
                                     @endif
 
-                                    <!-- CTA Button -->
+                                   // CTA Button
                                     <div class="text-center">
                                         @if($index == 0)
                                             <a href="{{ route('register') }}" class="block w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
@@ -1014,7 +1014,7 @@
                     </div>
                 </div>
 
-                <!-- Custom Solutions Info -->
+                // Custom Solutions Info
                 <div class="bg-white p-6 mt-10 rounded-xl shadow-md border border-gray-100 max-w-3xl mx-auto" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
@@ -1032,11 +1032,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- About Us -->
-        <section id="about" class="py-20 bg-gray-50" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+        <!-- <section id="about" class="py-20 bg-gray-50" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">{{ __('messages.theme3.about_vcards') }}</h2>
@@ -1088,10 +1088,10 @@
 
                     </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- FAQ Section -->
-        <section class="py-20 bg-white" id="faq">
+        <!-- <section class="py-20 bg-white" id="faq">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">{{ __('messages.theme3.frequently_asked_questions') }}</h2>
@@ -1102,7 +1102,7 @@
                     </div>
                 </div>
 
-                <!-- Alpine.js FAQ Accordion -->
+                //Alpine.js FAQ Accordion
                 <div x-data="{ activeAccordion: -1 }" class="space-y-3">
                     @foreach ($faq as $index => $faqs)
                         <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
@@ -1126,10 +1126,10 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Contact Us Section -->
-        <section id="contact" class="py-20 bg-gray-50" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
+        <!-- <section id="contact" class="py-20 bg-gray-50" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16" @if (checkFrontLanguageSession() == 'ar' || checkFrontLanguageSession() == 'fa') dir="rtl" @endif>
                     <div
@@ -1143,7 +1143,7 @@
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8">
-                    <!-- Contact Form -->
+                    // Contact Form
                     <div class="lg:col-span-2">
                         <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                             <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ __('messages.theme3.send_a_msg') }}</h3>
@@ -1188,9 +1188,9 @@
                         </div>
                     </div>
 
-                    <!-- Contact Information -->
+                    // Contact Information
                     <div class="space-y-6">
-                        <!-- Contact Methods -->
+                        // Contact Methods
                         <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                             <div class="space-y-6">
                                 <div class="flex items-start">
@@ -1233,5 +1233,5 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 @endsection

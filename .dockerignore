@@ -1,16 +1,20 @@
-# Docker Ignore for Render.com
-# This speeds up deployment by ignoring large local folders
 
-/vendor
 /node_modules
 /public/hot
 /public/storage
 /storage/*.key
-.git
+/vendor
 .env
-.env.backup
-.idea
-.vscode
+.env.*
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
 npm-debug.log
 yarn-error.log
-ixiz/
+/.idea
+/.vscode
+/bootstrap/cache/*.php
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*.php
